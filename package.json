@@ -19,7 +19,7 @@
     "jsonlint": "find . -not -path './node_modules/*' -type f -name '*.json' -o -type f -name '*.json.example' | while read json; do echo $json ; jq . $json; done",
     "standard": "node ./node_modules/standard/bin/cmd.js",
     "dev": "webpack --config webpack.config.js --progress --colors --watch",
-    "build": "webpack --config webpack.production.js --progress --colors --bail",
+    "build": "node --max-old-space-size=6144 node_modules/webpack/bin/webpack.js --config webpack.production.js --progress --colors --bail",
     "postinstall": "npm run build",
     "start": "node app.js",
     "doctoc": "doctoc --title='# Table of Contents' README.md"
