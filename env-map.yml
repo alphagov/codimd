@@ -1,0 +1,2 @@
+env_vars:
+  CMD_DB_URL: .postgres[0].credentials.uri
