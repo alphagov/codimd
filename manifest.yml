@@ -8,7 +8,14 @@ applications:
   - https://github.com/andy-paine/env-map-buildpack
   - nodejs_buildpack
   env:
+    CF_DB: hackmd-db
+    CMD_ALLOW_ORIGIN: 'localhost,hackmd.((domain)),cdnjs.cloudflare.com,fonts.googleapis.com,fonts.gstatic.com,github.com'
+    CMD_DOMAIN: 'hackmd.((domain))'
+    CMD_GITHUB_CLIENTID: ((github_client_id))
+    CMD_GITHUB_CLIENTSECRET: ((github_client_secret))
+    CMD_IMAGE_UPLOAD_TYPE: s3
+    CMD_PORT: 8080
+    CMD_PROTOCOL_USESSL: 'true'
+    CMD_SESSION_SECRET: ((secret))
     PGSSLMODE: require
     UV_THREADPOOL_SIZE: 100
-    CMD_PORT: 8080
-    CMD_IMAGE_UPLOAD_TYPE: s3
