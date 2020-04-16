@@ -1,6 +1,6 @@
 env_vars:
   CMD_DB_URL: .postgres[0].credentials.uri
-  CMD_S3_BUCKET: .aws-s3-bucket[0].credentials.bucket_name
-  CMD_S3_ACCESS_KEY_ID: .aws-s3-bucket[0].credentials.aws_access_key_id
-  CMD_S3_SECRET_ACCESS_KEY: .aws-s3-bucket[0].credentials.aws_secret_access_key
-  CMD_S3_REGION: .aws-s3-bucket[0].credentials.aws_region
+  CMD_S3_BUCKET: .["aws-s3-bucket"][0].credentials.bucket_name
+  CMD_S3_ACCESS_KEY_ID: .["aws-s3-bucket"][0].credentials.aws_access_key_id
+  CMD_S3_SECRET_ACCESS_KEY: .["aws-s3-bucket"][0].credentials.aws_secret_access_key
+  CMD_S3_REGION: .["aws-s3-bucket"][0].credentials.aws_region
