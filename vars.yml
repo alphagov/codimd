@@ -1,0 +1,5 @@
+---
+domain: ${DEPLOY_ENV}.dev.cloudpipelineapps.digital
+github_client_id: NA
+github_client_secret: NA
+secret: some-secret-session-key
