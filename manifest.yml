@@ -9,6 +9,7 @@ applications:
   - nodejs_buildpack
   env:
     CF_DB: hackmd-db
+    CMD_ALLOW_ANONYMOUS: true
     CMD_ALLOW_ORIGIN: 'localhost,hackmd.((domain)),cdnjs.cloudflare.com,fonts.googleapis.com,fonts.gstatic.com,githubusercontent.com,github.com'
     CMD_DOMAIN: 'hackmd.((domain))'
     CMD_GITHUB_CLIENTID: ((github_client_id))
